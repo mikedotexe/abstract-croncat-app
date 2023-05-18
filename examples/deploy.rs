@@ -7,7 +7,7 @@ use cw_orch::prelude::networks::ChainInfo;
 use semver::Version;
 
 use clap::Parser;
-use template_app::{interface::Template, TEMPLATE_ID};
+use template_app::{interface::CronCat, CRON_CAT_ID};
 use tokio::runtime::Runtime;
 
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
@@ -19,7 +19,7 @@ fn deploy_app(chain: ChainInfo) -> anyhow::Result<()> {
         .chain(chain)
         .handle(rt.handle())
         .build()?;
-    let mut app = Template::new(TEMPLATE_ID, chain);
+    let mut app = CronCat::new(CRON_CAT_ID, chain);
 
     app.deploy(version)?;
     Ok(())

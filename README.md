@@ -1,6 +1,6 @@
-# Abstract App Module Template
+# Abstract App Module CronCat
 
-The Abstract App Module Template is a starting point for developing composable smart-contracts, or "apps", that enable features or transform Accounts into standalone products. Each app is instantiated for each Account individually and is migratable. Apps are allowed to perform actions on the proxy contract and may also want to integrate with other enabled modules and APIs, and have access to the AnsHost contract for address storage.
+The Abstract App Module CronCat is a starting point for developing composable smart-contracts, or "apps", that enable features or transform Accounts into standalone products. Each app is instantiated for each Account individually and is migratable. Apps are allowed to perform actions on the proxy contract and may also want to integrate with other enabled modules and APIs, and have access to the AnsHost contract for address storage.
 
 The base state of an app includes the following:
 
@@ -52,4 +52,4 @@ To run a task, simply type `just <task-name>`. For example, to run the tests, yo
 
 ## Contributing
 
-We welcome contributions to the Abstract App Module Template! To contribute, fork this repository and submit a pull request with your changes. If you have any questions or issues, please open an issue in the repository and we will be happy to assist you.
+We welcome contributions to the Abstract App Module CronCat! To contribute, fork this repository and submit a pull request with your changes. If you have any questions or issues, please open an issue in the repository and we will be happy to assist you.

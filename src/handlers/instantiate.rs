@@ -1,7 +1,7 @@
 use cosmwasm_std::{wasm_execute, DepsMut, Env, MessageInfo, Response, SubMsg};
 
-use crate::contract::{TemplateApp, TemplateResult};
-use crate::msg::TemplateInstantiateMsg;
+use crate::contract::{CronCatApp, CronCatResult};
+use crate::msg::CronCatInstantiateMsg;
 use crate::replies::INSTANTIATE_REPLY_ID;
 use crate::state::{Config, CONFIG};
 
@@ -9,9 +9,9 @@ pub fn instantiate_handler(
     deps: DepsMut,
     _env: Env,
     _info: MessageInfo,
-    _app: TemplateApp,
-    _msg: TemplateInstantiateMsg,
-) -> TemplateResult {
+    _app: CronCatApp,
+    _msg: CronCatInstantiateMsg,
+) -> CronCatResult {
     let config: Config = Config {};
 
     CONFIG.save(deps.storage, &config)?;

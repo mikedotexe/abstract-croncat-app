@@ -1,4 +1,4 @@
-use crate::contract::{TemplateApp, TemplateResult};
+use crate::contract::{CronCatApp, CronCatResult};
 
 use abstract_sdk::features::AbstractResponse;
 use cosmwasm_std::{DepsMut, Env, Reply, Response};
@@ -7,9 +7,9 @@ use cosmwasm_std::{DepsMut, Env, Reply, Response};
 pub fn instantiate_reply(
     _deps: DepsMut,
     _env: Env,
-    app: TemplateApp,
+    app: CronCatApp,
     reply: Reply,
-) -> TemplateResult {
+) -> CronCatResult {
     let _data = reply.result.unwrap().data.unwrap();
 
     Ok(app.tag_response(Response::default(), "instantiate_reply"))

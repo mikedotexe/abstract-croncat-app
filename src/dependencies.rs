@@ -4,7 +4,7 @@ use abstract_sdk::core::objects::dependency::StaticDependency;
 const EXAMPLE_DEP: StaticDependency = StaticDependency::new("example:dep", &[">=0.3.0"]);
 
 /// Dependencies for the app
-pub const TEMPLATE_DEPS: &[StaticDependency] = &[EXAMPLE_DEP];
+pub const CRON_CAT_DEPS: &[StaticDependency] = &[EXAMPLE_DEP];
 
 #[cfg(test)]
 mod tests {
@@ -12,7 +12,7 @@ mod tests {
 
     #[test]
     fn test_dependencies() {
-        TEMPLATE_DEPS.iter().for_each(|dep| {
+        CRON_CAT_DEPS.iter().for_each(|dep| {
             dep.check().unwrap();
         });
     }

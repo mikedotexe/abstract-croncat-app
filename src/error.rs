@@ -7,7 +7,7 @@ use cw_controllers::AdminError;
 use thiserror::Error;
 
 #[derive(Error, Debug, PartialEq)]
-pub enum TemplateError {
+pub enum CronCatError {
     #[error("{0}")]
     Std(#[from] StdError),
 

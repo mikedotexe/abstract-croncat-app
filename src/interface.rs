@@ -5,9 +5,9 @@ use cw_orch::prelude::*;
 use cw_orch::{contract::Contract, interface};
 
 #[interface(InstantiateMsg, ExecuteMsg, QueryMsg, MigrateMsg)]
-pub struct Template<Chain>;
+pub struct CronCat<Chain>;
 
-impl<Chain: CwEnv> Uploadable for Template<Chain> {
+impl<Chain: CwEnv> Uploadable for CronCat<Chain> {
     fn wasm(&self) -> cw_orch::prelude::WasmPath {
         ArtifactsDir::env().find_wasm_path(&self.id()).unwrap()
     }
@@ -27,9 +27,9 @@ impl<Chain: CwEnv> Uploadable for Template<Chain> {
     }
 }
 
-impl<Chain: CwEnv> AppDeployer<Chain> for Template<Chain> {}
+impl<Chain: CwEnv> AppDeployer<Chain> for CronCat<Chain> {}
 
-impl<Chain: CwEnv> Template<Chain> {
+impl<Chain: CwEnv> CronCat<Chain> {
     pub fn new(name: &str, chain: Chain) -> Self {
         Self(Contract::new(name, chain))
     }
